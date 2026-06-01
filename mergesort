@@ -1,1 +1,13 @@
+void mergeSort(int labubu[], int kaire, int desine)
+{
+    if(kaire < desine)
+    {
+        int viduriukas = (kaire + desine) / 2;
+
+        mergeSort(labubu, kaire, viduriukas);
+        mergeSort(labubu, viduriukas + 1, desine);
+
+        merge(labubu, kaire, viduriukas, desine);
+    }
+}
 
